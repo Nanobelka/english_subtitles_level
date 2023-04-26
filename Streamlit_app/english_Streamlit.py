@@ -112,6 +112,21 @@ def load_model(model_name):
 # In[ ]:
 
 
+@st.cache_data
+def image_path(image_name):
+    
+    file_local = f'{PATH_DATA_LOCAL}{image_name}'
+    file_remote = f'{PATH_DATA_REMOTE}{image_name}'
+    
+    if os.path.isfile(file_local):
+        return file_local
+    else:
+        return file_remote
+
+
+# In[ ]:
+
+
 # @st.cache_data
 # def load_data_local(df_name, n_rows=5):
 #     df = pd.read_csv(f'{PATH_DATA}{df_name}', nrows=n_rows)
@@ -132,7 +147,7 @@ model = load_model('model_dump.pcl')
 # In[ ]:
 
 
-st.image('images/banner.jpg')
+st.image(image_path('images/banner.jpg'))
 
 
 # In[ ]:
