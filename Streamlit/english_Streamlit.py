@@ -110,7 +110,7 @@ model = load_model()
 # In[ ]:
 
 
-st.image('images/banner.jpg')
+st.image(f'{PATH_DATA}images/banner.jpg')
 
 
 # In[ ]:
