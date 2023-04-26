@@ -23,7 +23,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 # In[ ]:
 
 
-PATH_DATA = 'https://github.com/Nanobelka/english_subtitles_level/blob/main/Streamlit/'
+PATH_DATA = 'Streamlit/'
 CR='\n'
 
 TITLE = 'English Subtitles Level Prediction'
