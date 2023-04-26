@@ -124,15 +124,6 @@ def image_path(image_name):
         return file_remote
 
 
-# In[ ]:
-
-
-# @st.cache_data
-# def load_data_local(df_name, n_rows=5):
-#     df = pd.read_csv(f'{PATH_DATA}{df_name}', nrows=n_rows)
-#     return df
-
-
 # ## Loads
 
 # In[ ]:
