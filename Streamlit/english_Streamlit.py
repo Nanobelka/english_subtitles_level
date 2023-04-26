@@ -23,7 +23,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 # In[ ]:
 
 
-PATH_DATA = ''
+PATH_DATA = 'https://github.com/Nanobelka/english_subtitles_level/blob/main/Streamlit/'
 CR='\n'
 
 TITLE = 'English Subtitles Level Prediction'
@@ -81,7 +81,7 @@ class TextSelector(BaseEstimator, TransformerMixin):
 @st.cache_resource
 def load_model():
     
-    with open('model_dump.pcl', 'rb') as file:
+    with open(f'{PATH_DATA}model_dump.pcl', 'rb') as file:
         model = pickle.load(file)
         
     return model
