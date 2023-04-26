@@ -10,7 +10,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-import os
 import joblib
 import pickle
 from io import StringIO
@@ -24,12 +23,10 @@ from sklearn.base import BaseEstimator, TransformerMixin
 # In[ ]:
 
 
-PATH_DATA_LOCAL = ''
-PATH_DATA_REMOTE = 'Streamlit_app/'
+PATH_DATA = 'Streamlit_app/'
+CR='\n'
 
 TITLE = 'English Subtitles Level Prediction'
-
-CR='\n'
 
 # text styles
 class f:
@@ -84,27 +81,8 @@ class TextSelector(BaseEstimator, TransformerMixin):
 @st.cache_resource
 def load_model():
     
-    with open('model_dump.pcl', 'rb') as file:
+    with open(f'{PATH_DATA}model_dump.pcl', 'rb') as file:
         model = pickle.load(file)
-        
-    return model
-
-
-# In[ ]:
-
-
-@st.cache_resource
-def load_model(model_name):
-    
-    file_local = f'{PATH_DATA_LOCAL}{model_name}'
-    file_remote = f'{PATH_DATA_REMOTE}{model_name}'
-    
-    if os.path.isfile(file_local):
-        with open(file_local, 'rb') as file:
-            model = pickle.load(file)
-    else:
-        with open(file_remote, 'rb') as file:
-            model = pickle.load(file)
         
     return model
 
@@ -124,7 +102,7 @@ def load_model(model_name):
 
 
 # загрузка модели из файла
-model = load_model('model_dump.pcl')
+model = load_model()
 
 
 # ## Output basic info
@@ -132,7 +110,7 @@ model = load_model('model_dump.pcl')
 # In[ ]:
 
 
-st.image('images/banner.jpg')
+st.image(f'{PATH_DATA}images/banner.jpg')
 
 
 # In[ ]:
@@ -142,7 +120,7 @@ st.image('images/banner.jpg')
 st.title(TITLE)
 
 # пояснительный текст
-st.write('This application helps English learners to determine the level of a movie by subtitles. Just drag your subtitle file into the input field and the incredibly cool artificial intelligence will do it.')
+st.write('This application will help English learners to determine the level of a movie by subtitles. Just drag your subtitle file into the input field and the incredibly cool artificial intelligence will do it.')
 
 
 # ## Input and Processing user's data
