@@ -5,7 +5,10 @@
 
 Необходимо разработать решение для автоматического определения уровня сложности англоязычных фильмов: обучить языковую модель и создать на ее базе веб-приложение.  
 
-
-
 ---
-*Сюда добавить общее описание работы, ссылки на разделы и приложение.*
+
+[Исследование и моделирование](https://github.com/Nanobelka/english_subtitles_level/tree/main/ML)
+
+[Разработка онлайн-приложения](https://github.com/Nanobelka/english_subtitles_level/tree/main/Streamlit_app)
+
+[Готовое онлайн-приложение](https://english-subtitles-level.streamlit.app/)
