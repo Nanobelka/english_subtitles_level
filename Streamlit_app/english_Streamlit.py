@@ -3,9 +3,6 @@
 
 # ## Imports
 
-# In[2]:
-
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -20,9 +17,6 @@ from sklearn.base import BaseEstimator, TransformerMixin
 
 
 # ## Constants
-
-# In[ ]:
-
 
 PATH_DATA_LOCAL = ''
 PATH_DATA_REMOTE = 'Streamlit_app/'
@@ -40,9 +34,6 @@ class f:
 
 # ## Settings
 
-# In[ ]:
-
-
 st.set_page_config(
                    page_title=TITLE,
                    page_icon='🎦',
@@ -57,9 +48,6 @@ st.set_page_config(
 
 # ## Functions
 
-# In[ ]:
-
-
 class TextSelector(BaseEstimator, TransformerMixin):
 
     def __init__(self, field):
@@ -70,15 +58,9 @@ class TextSelector(BaseEstimator, TransformerMixin):
         return X[self.field]
 
 
-# In[ ]:
-
-
 # @st.cache_resource
 # def load_model():
 #     return joblib.load(f'{PATH_DATA}model_dump.mdl')
-
-
-# In[ ]:
 
 
 @st.cache_resource
@@ -88,9 +70,6 @@ def load_model():
         model = pickle.load(file)
         
     return model
-
-
-# In[ ]:
 
 
 @st.cache_resource
@@ -109,9 +88,6 @@ def load_model(model_name):
     return model
 
 
-# In[ ]:
-
-
 @st.cache_data
 def image_path(image_name):
     
@@ -126,48 +102,45 @@ def image_path(image_name):
 
 # ## Loads
 
-# In[ ]:
-
-
 # загрузка модели из файла
 model = load_model('model_dump.pcl')
 
 
 # ## Output basic info
 
-# In[ ]:
-
-
+# баннер приложения
 st.image(image_path('images/banner.jpg'))
 
-
-# In[ ]:
-
-
 # заголовок приложения
-st.title(TITLE)
-
-# пояснительный текст
-st.write('This application helps English learners to determine the level of a movie by subtitles. Just drag your subtitle file into the input field and the incredibly cool artificial intelligence will do it.')
+# st.title(TITLE)
+st.markdown(f'<h1 style="text-align: center;">{TITLE}</h1>', unsafe_allow_html=True)
 
 
-# ## Input and Processing user's data
+# ## Input user's data
 
-# In[ ]:
+column_1, column_2 = st.columns(2)
+
+with column_2:
+    # поле для ввода файла с субтитрами
+    uploaded_file = st.file_uploader('Choose a file with subtitles in english', type=['txt','srt'], label_visibility='collapsed')    
+
+with column_1:
+    # пояснительный текст
+    description_text_1 = 'This application helps English learners to determine the CEFR-level of a movie by subtitles.'
+    description_text_2 = 'Just drag your subtitle file into the input field and the incredibly cool artificial intelligence will do it.'
+    st.markdown(f'<h6 style="text-align: right; font-size: 16px;">{description_text_1}</h6>', unsafe_allow_html=True)
+    st.markdown(f'<h6 style="text-align: right; font-size: 16px;">{description_text_2}</h6>', unsafe_allow_html=True)
 
 
-uploaded_file = st.file_uploader('Choose a file with subtitles in english', type=['txt','srt'], label_visibility='collapsed')
+# ## Processing user's data
 
 if uploaded_file is not None:
 
-    subs_file = StringIO(uploaded_file.getvalue().decode('utf-8'))
-    subs_str = subs_file.read()
-    # st.write(subs)
+    subs_str = StringIO(uploaded_file.getvalue().decode('utf-8')).read()
 
     # объединение введенных данных в мини-таблицу (из одной строки)
     data_test = pd.DataFrame(data={'Subtitles':[subs_str],
-    #                                'age':[age],
-    #                                'active':[active],
+    #                                'new_field':[new_field],
                                   }
                             )
 
@@ -184,18 +157,16 @@ if uploaded_file is not None:
     elif level[0] == 'C':
         value_color = 'red'
     
-#     st.subheader(f'Level of your subs: :blue[{level}]')
-    st.subheader(f'Level of your subs: :{value_color}[{level}]')
+    with column_2:
+        style = "<h6 style='text-align: center; font-size: 26px;'>"
+        style_end = "</h6>"
+        text = f"{style}CEFR-level of your subtitles: <span style='color:{value_color};'>{level}</span>{style_end}"
+        st.markdown(text, unsafe_allow_html=True)
 
-
-
-    # st.subheader(f'Probability of cardiovascular disease is about :{value_color}[{disease_proba : .1%}]')
+#         st.subheader(f'CEFR-level of your subtitles: :{value_color}[{level}]')
 
 
 # ## Disclamer
-
-# In[ ]:
-
 
 st.caption('------')
 st.caption('**Disclaimer.** "Everything is very simple" (C)')
@@ -203,21 +174,5 @@ st.caption('**Disclaimer.** "Everything is very simple" (C)')
 
 # ## Final service message
 
-# In[ ]:
-
-
 st.caption('------')
 st.caption('*Service info: NO errors*')
-
-
-# ## Remarks
-
-# для удаленного запуска приложения из репозитория GitHub:
-
-#     streamlit run https://raw.githubusercontent.com/Nanobelka/Cardiovascular-disease-prediction/main/Cardio_Streamlit.py
-
-# для локального запуска приложения
-
-#     d:  
-#     cd DATA/Work_analytics/Jupyter_Notebook/Praktikum_DS/10_english/Streamlit_app  
-#     streamlit run english_Streamlit.py  
