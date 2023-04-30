@@ -7,7 +7,8 @@
 Исследовано влияние на качество модели ряда дополнительных признаков.  
 
 ### 1. [Подготовка словаря](https://nbviewer.jupyter.org/github/Nanobelka/english_subtitles_level/blob/main/ML/1_words.ipynb)  
-Создан словарь, включающий слова из `"American_Oxford_3000_by_CEFR_level"` и `"American_Oxford_5000_by_CEFR_level"`. Для каждого слова указан его уровень.
+Создан словарь, включающий слова из `"American_Oxford_3000_by_CEFR_level"` и `"American_Oxford_5000_by_CEFR_level"`.  
+Для каждого слова указан его уровень.  
 
 ### 2. [Подготовка слов из субтитров](https://nbviewer.jupyter.org/github/Nanobelka/english_subtitles_level/blob/main/ML/2_subtitles.ipynb)  
 Из субтитров удалена лишняя информация (служебные данные, знаки препинания и т. п.)  
