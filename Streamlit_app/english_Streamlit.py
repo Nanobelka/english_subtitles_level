@@ -169,7 +169,7 @@ if uploaded_file is not None:
 # ## Disclamer
 
 st.caption('------')
-st.caption('**Disclaimer.** "Everything is very simple"')
+st.caption('**Disclaimer.** "Everything is very simple".')
 
 
 # ## Final service message
