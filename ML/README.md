@@ -13,7 +13,7 @@
 ### 2. [Подготовка слов из субтитров](https://nbviewer.jupyter.org/github/Nanobelka/english_subtitles_level/blob/main/ML/2_subtitles.ipynb)  
 Из субтитров удалена лишняя информация (служебные данные, знаки препинания и т. п.)  
 Уровень приведен в соотетствие с классификации CEFR.  
-Разработаны новые для проверки их влияния на качество модели.  
+Разработаны новые признаки для проверки их влияния на качество модели.  
 
 ### 3. [Baseline-модель](https://nbviewer.jupyter.org/github/Nanobelka/english_subtitles_level/blob/main/ML/3_baseline.ipynb)  
 Для baseline-модели были сгенерированы тексты, состоящие из слов какого-либо определенного уровня.  
