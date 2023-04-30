@@ -1,4 +1,4 @@
-# English Subtitles Level Prediction
+# English Movie Level Prediction
 ## Исследование и моделирование
 
 Выполнена обработка входных данных и создан датасет для обучения модели.  
