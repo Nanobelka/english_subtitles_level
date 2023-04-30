@@ -41,7 +41,7 @@ st.set_page_config(
                    menu_items={
 #                                'Get Help': 'https://....',
 #                                'Report a bug': "https://....",
-                               'About': 'Written by Sergei Vasiliev. Fell free contact to me in Telegram @nanobelkads.'
+                               'About': 'Written by Sergei Vasilev. Fell free contact to me in Telegram @nanobelkads.'
                               }
                  )
 
