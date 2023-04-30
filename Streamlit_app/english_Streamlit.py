@@ -21,7 +21,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 PATH_DATA_LOCAL = ''
 PATH_DATA_REMOTE = 'Streamlit_app/'
 
-TITLE = 'English Subtitles Level Prediction'
+TITLE = 'English Movie Level Prediction'
 
 CR='\n'
 
