@@ -13,4 +13,4 @@
 [Разработка онлайн-приложения](https://github.com/Nanobelka/english_subtitles_level/tree/main/Streamlit_app)
 --->
 
-[Готовое онлайн-приложение](https://english-subtitles-level.streamlit.app/)
+[Готовое онлайн-приложение](https://movie-level.streamlit.app/)
