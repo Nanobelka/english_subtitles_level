@@ -30,3 +30,11 @@
 Сделана контрольная проверка модели на тестовой выборке.  
 Модель сохранена для использования в [онлайн-приложении](https://movie-level.streamlit.app/).  
 
+### 5. [Поиск кластеров и выбросов](https://nbviewer.jupyter.org/github/Nanobelka/english_subtitles_level/blob/main/ML/5_outliers.ipynb)  
+Создан трансоформер данных, проецирующий текст субтитров в двумерное пространство принципиальных компонент.  
+Преобразованные данные изображены на интерактивном графике.  
+Проанализированы полученные кластеры.  
+Отмечено отсутствие выбросов.  
+В качестве резерва сделан статичный график без использования Plotly.  
+[график "Clusters and Outliers detection"](https://github.com/Nanobelka/english_subtitles_level/blob/main/ML/movie_subtitles_projection.html)  
+[график](https://Nanobelka.github.io/english_subtitles_level/blob/main/ML/movie_subtitles_projection.html)
