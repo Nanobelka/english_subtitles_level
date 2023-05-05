@@ -39,4 +39,5 @@
 [график "Clusters and Outliers detection"](https://github.com/Nanobelka/english_subtitles_level/blob/main/ML/movie_subtitles_projection.html)  
 [график](https://Nanobelka.github.io/english_subtitles_level/blob/main/ML/movie_subtitles_projection.html)
 
-<a href="https://Nanobelka.github.io/english_subtitles_level/index.html">Открыть файл в формате HTML</a>
+<a href="http://htmlpreview.github.com/?https://Nanobelka.github.io/english_subtitles_level/index.html">Открыть файл в формате HTML</a>  
+<a href="http://htmlpreview.github.com/?https://github.com/Nanobelka/english_subtitles_level/blob/main/ML/movie_subtitles_projection.html">Открыть файл в формате HTML</a>
