@@ -36,5 +36,4 @@
 Проанализированы полученные кластеры.  
 Отмечено отсутствие выбросов.  
 В качестве резерва сделан статичный график без использования Plotly.  
-[график "Clusters and Outliers detection"](https://github.com/Nanobelka/english_subtitles_level/blob/main/ML/movie_subtitles_projection.html)  
-[график](https://Nanobelka.github.io/english_subtitles_level/blob/main/ML/movie_subtitles_projection.html)
+[график "Clusters and Outliers detection"](https://raw.githack.com/Nanobelka/english_subtitles_level/main/movie_subtitles_projection.html)  
