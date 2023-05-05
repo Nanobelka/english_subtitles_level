@@ -15,4 +15,4 @@
 
 [Готовое онлайн-приложение](https://movie-level.streamlit.app/)
 
-[график "Clusters and Outliers detection"](https://raw.githack.com/Nanobelka/english_subtitles_level/main/movie_subtitles_projection.html)  
+[График "Clusters and Outliers detection"](https://raw.githack.com/Nanobelka/english_subtitles_level/main/movie_subtitles_projection.html)  
