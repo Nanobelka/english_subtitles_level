@@ -1,5 +1,6 @@
 # [English Movie Level Prediction](https://movie-level.streamlit.app/)
 ### Streamlit app based ML-model for prediction of english movie CEFR-level – for everyone who is learning English
+##### Project for [Yandex.Workshop](https://github.com/Nanobelka/Yandex_Workshop)
 
 Запрос сформирован тем, что просмотр фильмов на оригинальном языке — это популярный и действенный метод при изучении иностранных языков. Важно выбрать фильм, который подходит по уровню сложности. Для этого преподаватель должен посмотреть фильм и решить, какому уровню он соответствует. Однако это требует больших затрат времени (а время — деньги).
 
